@@ -21,8 +21,10 @@ function Clock() {
 		if (hours < 1) {
 			hours = 12;
 			meridian = "AM";
-		} else if (hours > 12) {
-			hours -= 12;
+		} else if (hours >= 12) {
+			if (hours != 12) {
+				hours -= 12;
+			}
 			meridian = "PM";
 		} else {
 			meridian = "AM";
